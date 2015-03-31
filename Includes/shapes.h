@@ -18,4 +18,7 @@ void fill_circle(bitmap* image, pixel **p, int xc, int yc, int r, pixel color);
 
 
 void drawcirlcec(bitmap* image, pixel **p, int xc, int yc, int r, pixel color_black);
+
+//Rectangle draw
+void drawrect(bitmap* image, pixel **p, int length, int breadth, int x, int y);
 #endif
