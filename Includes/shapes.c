@@ -108,7 +108,7 @@ static void plot(bitmap *image, pixel **p, int x, int y, pixel color)
 	
 }
 
-void drawcirlce(bitmap* image, pixel **p, int xc, int yc, int r)
+void drawcircle(bitmap* image, pixel **p, int xc, int yc, int r)
 {	
 	int x,y,re;
 	x=r;
@@ -135,7 +135,7 @@ void drawcirlce(bitmap* image, pixel **p, int xc, int yc, int r)
 	}
 }
 
-void drawcirlcec(bitmap* image, pixel **p, int xc, int yc, int r, pixel color_black)
+void drawcirclec(bitmap* image, pixel **p, int xc, int yc, int r, pixel color_black)
 {	
 	int x,y,re;
 	x=r;
@@ -180,4 +180,37 @@ void fill_circle(bitmap* image, pixel **p, int xc, int yc, int r, pixel color)
 				p[i][j]=color;
 		}
 	}
+}
+
+void fillrect(bitmap *image, pixel **p, int length, int breadth, int x, int y, pixel color)
+{
+	int i, j, xl, xr, yu, yb, h, w;
+	h = image->height;
+	w = image->width;
+	xr = x+breadth;
+	xl = x-breadth;
+	yu = y+length;
+	yb = y-length;
+	for(i=0; i<h; ++i)
+		for(j=0; j<w; ++j)
+		{
+			if(j>=xl&&j<=xr&&i>=yb&&i<=yu)
+				p[i][j]=color;
+		}
+}
+
+
+void drawrect(bitmap *image, pixel **p, int length, int breadth, int x, int y, pixel color)
+{
+	int i, j, xl, xr, yu, yb, h, w;
+	h = image->height;
+	w = image->width;
+	xr = x+breadth;
+	xl = x-breadth;
+	yu = y+length;
+	yb = y-length;
+	drawlinec(image,p,xl,xr,yu,yu,color);
+	drawlinec(image,p,xl,xr,yb,yb,color);
+	drawlinec(image,p,xl,xl,yb,yu,color);
+	drawlinec(image,p,xr,xr,yb,yu,color);
 }
