@@ -1,5 +1,5 @@
 # Bitmap-GeneratorC
-Bitmap Generator is C library to generate bitmaps from scratch by manipulating the pixels. The pixel used in this library is 24bit color (16 Million colors). Windows bitmap is used here which has 54bytes of header data which is compatible with all the image viewers. Basic colors and shapes are included. 
+Bitmap Generator has been written in C to generate bitmaps from scratch by manipulating the pixels. 24Bit pixels used here . 54byte Windows Bitmap format used. Basic colors and shapes are included. 
 
 To-do:
 Ellipse and other shapes to be added
