@@ -1,9 +1,6 @@
 #include "bitmap.h"
-//Used for malloc and other functions
 #include<stdlib.h>
-//Used for FILE io
 #include<stdio.h>
-//Colors for pixel
 #include"pixel.h"
 //Creating a bmp header with arguements width and height
 
